@@ -1,13 +1,20 @@
 {
-  "name": "wujie-vue-setup",
+  "name": "wujie-vue-setup-ss",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lib": "webpack"
+    "lib": "webpack",
+    "esm": "swc src/index.ts -d esm"
   },
+  "files": [
+    "lib",
+    "esm",
+    "index.d.ts"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -13,7 +13,7 @@ const config = {
     mode: 'none',
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'lib'),
         // 开发库的时候用到
         library: "wujievue",
         libraryTarget: 'umd',
