@@ -1,24 +1,36 @@
-
-
-import { Configuration } from 'webpack'
+import webpack from 'webpack'
 import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 /**
- * @type {Configuration} param0 
+ * @type {webpack.Configuration} param0 
  */
 const config = {
     entry: './src/index.ts',
+    mode: 'none',
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
+        // 开发库的时候用到
+        library: "wujievue",
+        libraryTarget: 'umd',
+        umdNamedDefine: true,
     },
-    modules: {
+    externals: {
+        vue: "vue",
+        wujie: "wujie",
+    },
+    module: {
         rules: [
             {
-                test: '/\.ts$/',
-                use: 'ts-loader',
+                test: /\.ts$/,
+                use: 'swc-loader',
             }
         ]
     }
 }
 
-module.exports = config
+export default config

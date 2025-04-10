@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lib": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
     "wujie": "^1.0.28"
   },
   "devDependencies": {
+    "@swc/core": "^1.11.18",
+    "swc-loader": "^0.2.6",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
     "vue": "^3.5.13",
