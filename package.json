@@ -16,6 +16,7 @@
     "wujie": "^1.0.28"
   },
   "devDependencies": {
+    "@swc/cli": "^0.6.0",
     "@swc/core": "^1.11.18",
     "swc-loader": "^0.2.6",
     "ts-loader": "^9.5.2",
